@@ -80,12 +80,6 @@ const ServicesSection = () => {
       path: "/services/software-development"
     },
     {
-      title: "Digital Marketing",
-      desc: "Digital marketing strategies to grow your business effectively.",
-      img: img11,
-      path: "/services/digital-marketing"
-    },
-    {
       title: "API Services",
       desc: "API services designed to help businesses integrate innovative solutions seamlessly.",
       img: img12,

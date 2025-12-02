@@ -87,10 +87,6 @@ const App = () => {
           element:<SoftwareDevelopment/>
         },
         {
-          path:"/services/digital-marketing",
-          element:<DigitalMarketing/>
-        },
-        {
           path:"/services/api-services",
           element:<ApiServices/>
         },

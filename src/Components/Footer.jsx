@@ -15,11 +15,17 @@ const Footer = () => {
   ];
 
   const services = [
-    'Web Development',
-    'Mobile App Development',
-    'UI/UX Design',
-    'Digital Marketing',
-    'Cloud Solutions'
+    { name: "B2B Software Solutions", path: "/services/b2b-solutions" },
+    { name: "Android Application Development", path: "/services/android-development" },
+    { name: "Website Development", path: "/services/website-development" },
+    { name: "Graphic Design", path: "/services/graphic-design" },
+    { name: "Fintech Software Development", path: "/services/fintech-software" },
+    { name: "Cloud Solutions", path: "/services/cloud-solutions" },
+    { name: "CRM Solutions", path: "/services/crm-solutions" },
+    { name: "E-Commerce Services", path: "/services/ecommerce-services" },
+    { name: "Salesforce Services", path: "/services/salesforce-services" },
+    { name: "Software Development", path: "/services/software-development" },
+    { name: "API Services", path: "/services/api-services" },
   ];
 
   return (
@@ -27,15 +33,15 @@ const Footer = () => {
     <footer className="bg-[#bae6fd] text-slate-800 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          
+
           {/* --- Column 1: Company Info --- */}
           <div>
-<img src={logo} alt="" />
+            <img src={logo} alt="" />
             {/* Dark Text for Paragraph */}
             <p className="text-slate-700 text-sm mb-6 leading-relaxed font-medium">
               Category - Software Development Startup. We transform ideas into powerful digital experiences with cutting-edge technology.
             </p>
-            
+
           </div>
 
           {/* --- Column 2: Quick Links --- */}
@@ -44,8 +50,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.path} 
+                  <Link
+                    to={link.path}
                     className="group flex items-center text-slate-700 hover:text-blue-700 transition-colors duration-200 font-medium"
                   >
                     <ChevronRight size={16} className="text-blue-700 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-200" />
@@ -58,11 +64,18 @@ const Footer = () => {
 
           {/* --- Column 3: Our Services --- */}
           <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-6 border-b-2 border-slate-900/10 pb-2 inline-block">Services</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-6 border-b-2 border-slate-900/10 pb-2 inline-block">
+              Services
+            </h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
-                <li key={index} className="text-sm text-slate-700 hover:text-blue-700 transition-colors cursor-pointer font-medium">
-                  {service}
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="text-sm text-slate-700 hover:text-blue-700 transition-colors cursor-pointer font-medium"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -72,7 +85,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-6 border-b-2 border-slate-900/10 pb-2 inline-block">Contact Us</h3>
             <div className="space-y-4">
-              
+
               {/* Address */}
               <div className="flex items-start gap-3">
                 <MapPin className="text-blue-700 flex-shrink-0 mt-1" size={20} />
@@ -89,7 +102,7 @@ const Footer = () => {
                   support@tronap.in
                 </a>
               </div>
-              
+
             </div>
           </div>
 
